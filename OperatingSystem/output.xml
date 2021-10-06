@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20211004 23:41:40.391" rpa="false" schemaversion="2">
+<suite id="s1" name="Operating System" source="c:\Users\RTrevisan\Desktop\Renato Trevisan\Exercícios\Ex 3\OperatingSystem\operating_system.robot">
+<test id="s1-t1" name="Exemplo 01: Criando arquivos">
+<kw name="Criando um arquivo texto">
+<kw name="Create File" library="OperatingSystem">
+<arg>./my_files/arquivo_TEXTO.txt</arg>
+<arg>Em Robot Framework ja estou um super ninja!!!!</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20211004 23:41:40.516" level="INFO" html="true">Created file '&lt;a href="file://c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_TEXTO.txt"&gt;c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_TEXTO.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20211004 23:41:40.515" endtime="20211004 23:41:40.517"/>
+</kw>
+<status status="PASS" starttime="20211004 23:41:40.513" endtime="20211004 23:41:40.518"/>
+</kw>
+<kw name="Criando um arquivo JSON">
+<kw name="Create File" library="OperatingSystem">
+<arg>./my_files/arquivo_JSON.json</arg>
+<arg>{"teste05": "valor05", "teste07": 8, "teste03": [3, 1, 2]}</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20211004 23:41:40.520" level="INFO" html="true">Created file '&lt;a href="file://c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_JSON.json"&gt;c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_JSON.json&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20211004 23:41:40.519" endtime="20211004 23:41:40.521"/>
+</kw>
+<status status="PASS" starttime="20211004 23:41:40.518" endtime="20211004 23:41:40.522"/>
+</kw>
+<status status="PASS" starttime="20211004 23:41:40.510" endtime="20211004 23:41:40.522"/>
+</test>
+<test id="s1-t2" name="Exemplo 02: Copiando arquivos">
+<kw name="Copiando meu arquivo">
+<kw name="Copy File" library="OperatingSystem">
+<arg>./my_files/arquivo_TEXTO.txt</arg>
+<arg>./my_files/arquivo_TEXTO_COPIA.txt</arg>
+<doc>Copies the source file into the destination.</doc>
+<msg timestamp="20211004 23:41:40.532" level="INFO" html="true">Copied file from '&lt;a href="file://c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_TEXTO.txt"&gt;c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_TEXTO.txt&lt;/a&gt;' to '&lt;a href="file://c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_TEXTO_COPIA.txt"&gt;c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_TEXTO_COPIA.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20211004 23:41:40.527" endtime="20211004 23:41:40.533"/>
+</kw>
+<kw name="Copy File" library="OperatingSystem">
+<arg>./my_files/arquivo_JSON.json</arg>
+<arg>./my_files/arquivo_JSON_COPIA.json</arg>
+<doc>Copies the source file into the destination.</doc>
+<msg timestamp="20211004 23:41:40.543" level="INFO" html="true">Copied file from '&lt;a href="file://c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_JSON.json"&gt;c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_JSON.json&lt;/a&gt;' to '&lt;a href="file://c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_JSON_COPIA.json"&gt;c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_JSON_COPIA.json&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20211004 23:41:40.534" endtime="20211004 23:41:40.544"/>
+</kw>
+<status status="PASS" starttime="20211004 23:41:40.526" endtime="20211004 23:41:40.545"/>
+</kw>
+<status status="PASS" starttime="20211004 23:41:40.524" endtime="20211004 23:41:40.545"/>
+</test>
+<test id="s1-t3" name="Exemplo 03: Lendo meu arquivo">
+<kw name="Lendo o conteúdo">
+<kw name="Get File" library="OperatingSystem">
+<var>${MEU_ARQUIVO}</var>
+<arg>./my_files/arquivo_TEXTO.txt</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20211004 23:41:40.551" level="INFO" html="true">Getting file '&lt;a href="file://c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_TEXTO.txt"&gt;c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_TEXTO.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20211004 23:41:40.551" level="INFO">${MEU_ARQUIVO} = Em Robot Framework ja estou um super ninja!!!!</msg>
+<status status="PASS" starttime="20211004 23:41:40.550" endtime="20211004 23:41:40.552"/>
+</kw>
+<kw name="Get File Size" library="OperatingSystem">
+<var>${SIZE}</var>
+<arg>./my_files/arquivo_TEXTO.txt</arg>
+<doc>Returns and logs file size as an integer in bytes.</doc>
+<msg timestamp="20211004 23:41:40.553" level="INFO" html="true">Size of file '&lt;a href="file://c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_TEXTO.txt"&gt;c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_TEXTO.txt&lt;/a&gt;' is 46 bytes.</msg>
+<msg timestamp="20211004 23:41:40.553" level="INFO">${SIZE} = 46</msg>
+<status status="PASS" starttime="20211004 23:41:40.552" endtime="20211004 23:41:40.553"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${MEU_ARQUIVO}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20211004 23:41:40.555" level="INFO">Em Robot Framework ja estou um super ninja!!!!</msg>
+<status status="PASS" starttime="20211004 23:41:40.554" endtime="20211004 23:41:40.555"/>
+</kw>
+<status status="PASS" starttime="20211004 23:41:40.549" endtime="20211004 23:41:40.556"/>
+</kw>
+<kw name="Lendo o binário">
+<kw name="Should Exist" library="OperatingSystem">
+<arg>./my_files/arquivo_PDF.pdf</arg>
+<arg>msg=O arquivo não existe!! Verifique!</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<msg timestamp="20211004 23:41:40.561" level="FAIL">O arquivo não existe!! Verifique!</msg>
+<status status="FAIL" starttime="20211004 23:41:40.557" endtime="20211004 23:41:40.561"/>
+</kw>
+<kw name="Get Binary File" library="OperatingSystem">
+<var>${MEU_ARQUIVO}</var>
+<arg>./my_files/arquivo_PDF.pdf</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="NOT RUN" starttime="20211004 23:41:40.562" endtime="20211004 23:41:40.563"/>
+</kw>
+<kw name="Get File Size" library="OperatingSystem">
+<var>${SIZE}</var>
+<arg>./my_files/arquivo_PDF.pdf</arg>
+<doc>Returns and logs file size as an integer in bytes.</doc>
+<status status="NOT RUN" starttime="20211004 23:41:40.563" endtime="20211004 23:41:40.564"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${MEU_ARQUIVO}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20211004 23:41:40.564" endtime="20211004 23:41:40.565"/>
+</kw>
+<status status="FAIL" starttime="20211004 23:41:40.556" endtime="20211004 23:41:40.567"/>
+</kw>
+<status status="FAIL" starttime="20211004 23:41:40.547" endtime="20211004 23:41:40.568">O arquivo não existe!! Verifique!</status>
+</test>
+<test id="s1-t4" name="Exemplo 04: Excluindo arquivos">
+<kw name="Listando arquivos do meu diretório">
+<kw name="List Directory" library="OperatingSystem">
+<arg>./my_files</arg>
+<doc>Returns and logs items in a directory, optionally filtered with ``pattern``.</doc>
+<msg timestamp="20211004 23:41:40.573" level="INFO" html="true">Listing contents of directory '&lt;a href="file://c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files"&gt;c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files&lt;/a&gt;'.</msg>
+<msg timestamp="20211004 23:41:40.574" level="INFO">4 items:
+arquivo_JSON.json
+arquivo_JSON_COPIA.json
+arquivo_TEXTO.txt
+arquivo_TEXTO_COPIA.txt</msg>
+<status status="PASS" starttime="20211004 23:41:40.572" endtime="20211004 23:41:40.574"/>
+</kw>
+<status status="PASS" starttime="20211004 23:41:40.571" endtime="20211004 23:41:40.575"/>
+</kw>
+<kw name="Excluir arquivo">
+<arg>arquivo_TEXTO_COPIA.txt</arg>
+<kw name="Remove File" library="OperatingSystem">
+<arg>./my_files/${ARQUIVO}</arg>
+<doc>Removes a file with the given path.</doc>
+<msg timestamp="20211004 23:41:40.579" level="INFO" html="true">Removed file '&lt;a href="file://c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_TEXTO_COPIA.txt"&gt;c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_TEXTO_COPIA.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20211004 23:41:40.578" endtime="20211004 23:41:40.579"/>
+</kw>
+<status status="PASS" starttime="20211004 23:41:40.576" endtime="20211004 23:41:40.580"/>
+</kw>
+<kw name="Excluir arquivo">
+<arg>arquivo_JSON_COPIA.json</arg>
+<kw name="Remove File" library="OperatingSystem">
+<arg>./my_files/${ARQUIVO}</arg>
+<doc>Removes a file with the given path.</doc>
+<msg timestamp="20211004 23:41:40.584" level="INFO" html="true">Removed file '&lt;a href="file://c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_JSON_COPIA.json"&gt;c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files\arquivo_JSON_COPIA.json&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20211004 23:41:40.583" endtime="20211004 23:41:40.585"/>
+</kw>
+<status status="PASS" starttime="20211004 23:41:40.581" endtime="20211004 23:41:40.585"/>
+</kw>
+<kw name="Listando arquivos do meu diretório">
+<kw name="List Directory" library="OperatingSystem">
+<arg>./my_files</arg>
+<doc>Returns and logs items in a directory, optionally filtered with ``pattern``.</doc>
+<msg timestamp="20211004 23:41:40.588" level="INFO" html="true">Listing contents of directory '&lt;a href="file://c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files"&gt;c:\Users\RTrevisan\Desktop\Renato Trevisan\arquivos_notas\CUCUMBER (1)\Resource\my_files&lt;/a&gt;'.</msg>
+<msg timestamp="20211004 23:41:40.588" level="INFO">2 items:
+arquivo_JSON.json
+arquivo_TEXTO.txt</msg>
+<status status="PASS" starttime="20211004 23:41:40.587" endtime="20211004 23:41:40.588"/>
+</kw>
+<status status="PASS" starttime="20211004 23:41:40.586" endtime="20211004 23:41:40.589"/>
+</kw>
+<status status="PASS" starttime="20211004 23:41:40.569" endtime="20211004 23:41:40.590"/>
+</test>
+<doc>http://robotframework.org/robotframework/latest/libraries/OperatingSystem.html</doc>
+<status status="FAIL" starttime="20211004 23:41:40.400" endtime="20211004 23:41:40.592"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="Operating System">Operating System</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
